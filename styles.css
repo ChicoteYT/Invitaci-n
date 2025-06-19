@@ -13,17 +13,27 @@
 }
 
 /* === Estilos Base y Layout === */
+/* === Estilos Base y Layout === */
 body {
+    /* Se establece la imagen de fondo solicitada */
+    background-image: url(background.png);
+    background-size: cover; /* Para que la imagen cubra todo el espacio */
+    background-position: center; /* Para centrar la imagen */
+    background-attachment: fixed; /* Para que la imagen no se desplace con el scroll */
+    
     font-family: "Work Sans", "Noto Sans", sans-serif;
     color: var(--text-color);
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Estilos para el fondo animado */
+
+    /* Las siguientes líneas del fondo animado han sido eliminadas: */
+    /*
     background: linear-gradient(-45deg, #00a11b, #7ebd47, #92dbee, #32cd32a6);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+    */
 }
 
 @keyframes gradient {
@@ -38,16 +48,35 @@ body {
     flex-grow: 1;
 }
 
-/* HEADER: Centra el contenido del header por defecto y maneja el caso de la página de inicio */
+/* Aplica el fondo degradado y animado al header y al footer */
+.main-header, .main-footer-bottom {
+    /* Se ha eliminado el valor de transparencia en el último color del degradado */
+    background: linear-gradient(-45deg, #00a11b, #7ebd47, #92dbee, #32cd32);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+
 .main-header {
     display: flex;
     align-items: center;
-    justify-content: center; /* Cambiado para centrar por defecto */
+    justify-content: center;
     padding: 1rem 2.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    gap: 2rem; /* Añade espacio entre los logos en las páginas secundarias */
+    gap: 2rem;
+    /* Los estilos de background se movieron a la regla agrupada */
 }
 
+/* Aplica el fondo degradado y animado al header y al footer */
+
+
+.main-footer-bottom {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.875rem;
+    color: #ffffff; /* Cambiado a blanco para mejor contraste */
+}
 /* Mantiene el diseño de 3 columnas en la página de inicio */
 /* Este selector se aplica solo si el header contiene un .content-container (el texto central) */
 .main-header:has(> .content-container) {
