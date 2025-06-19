@@ -2,7 +2,7 @@
 :root {
     /* Colores solicitados */
     --color-primary: #32cd32a2;         /* Verde principal para botones */
-    --color-button-alt: #C5FF98;      /* Verde claro para botones alternativos y acentos */
+    --color-button-alt: #51ff00a2;      /* Verde claro para botones alternativos y acentos */
 
     /* Colores base */
     --text-color: #0e1b0e;
@@ -38,14 +38,28 @@ body {
     flex-grow: 1;
 }
 
-/* HEADER: Se asegura que los logos estén en extremos opuestos */
+/* HEADER: Centra el contenido del header por defecto y maneja el caso de la página de inicio */
 .main-header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Clave para la alineación de logos */
+    justify-content: center; /* Cambiado para centrar por defecto */
     padding: 1rem 2.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    gap: 2rem; /* Añade espacio entre los logos en las páginas secundarias */
 }
+
+/* Mantiene el diseño de 3 columnas en la página de inicio */
+/* Este selector se aplica solo si el header contiene un .content-container (el texto central) */
+.main-header:has(> .content-container) {
+    justify-content: space-between;
+    gap: 0; /* No es necesario un gap cuando se usa space-between */
+}
+
+/* Centra el texto del slogan en el header de la página de inicio */
+.main-header .content-container {
+    text-align: center;
+}
+
 
 .main-content {
     padding: 2rem 5rem;
