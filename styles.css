@@ -1,7 +1,7 @@
 /* === Variables Globales === */
 :root {
     /* Colores solicitados */
-    --color-primary: #32CD32;         /* Verde principal para botones */
+    --color-primary: #32cd32a6;         /* Verde principal para botones */
     --color-button-alt: #C5FF98;      /* Verde claro para botones alternativos y acentos */
     --color-grad-start: #99FF98;      /* Inicio del degradado de fondo */
     --color-grad-end: #99FFC6;        /* Fin del degradado de fondo */
@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     /* Estilos para el fondo animado */
-    background: linear-gradient(-45deg, #99FF98, #38915e, #04b601b4, #99FFC6);
+    background: linear-gradient(-45deg, #00a11b, #51ad00, #ADD8E6, #32cd32a6);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
