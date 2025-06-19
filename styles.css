@@ -21,7 +21,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     /* Estilos para el fondo animado */
-    background: linear-gradient(-45deg, #00a11b, #51ad00, #92dbee, #32cd32a6);
+    background: linear-gradient(-45deg, #00a11b, #7ebd47, #92dbee, #32cd32a6);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
